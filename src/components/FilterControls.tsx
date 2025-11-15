@@ -5,24 +5,28 @@ function FilterControls() {
   const { filter, setFilter } = useContext(FilterContext);
 
 
-   // Filter button handlers
-  const allFilter = () => setFilter('all');
-  const activeFilter = () => setFilter('active');
-  const completeFilter = () => setFilter('completed');
-
+   
   return (
-    <>
+    <div>
       <h1>Filter Component</h1>
       <div>
-        Filter: <button onClick={allFilter}>All</button>
+         <button onClick={()=> setFilter('all')}
+         style={{fontWeight: filter=== 'all' ? 'bold' : 'normal'}}
+         className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
+        >All</button>
       </div>
       <div>
-        Filter: <button onClick={activeFilter}>Active</button>
+       <button onClick={()=> setFilter('active')}
+        style={{fontWeight: filter=== 'active' ? 'bold' : 'normal'}}
+        >Active</button>
       </div>
       <div>
-        Filter: <button onClick={completeFilter}>Completed</button>
+         <button onClick={()=> setFilter('completed')}
+         style={{fontWeight: filter=== 'completed' ? 'bold' : 'normal'}}
+        >Completed</button>
+
       </div>
-    </>
+    </div>
   );
 }
 

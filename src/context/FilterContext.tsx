@@ -1,6 +1,11 @@
 import {createContext, useState } from "react";
 
-export const FilterContext = createContext('active')
+export const FilterContext = createContext<{
+    filter: 'all' |'active' |'completed',
+    setFilter: (value: 'all' |'active' |'completed') => void
+}>({filter: 'all', setFilter: ()=>{},})
+
+
 
 interface FilterProviderProps{
     children: React.ReactNode;

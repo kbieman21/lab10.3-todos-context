@@ -18,7 +18,6 @@ function TodoItem({todo}:TodoItemProps){
 
     return(
         <>
-            <h1>Todo Item</h1>
             <li>
                 <input 
                 type="checkbox"

@@ -24,8 +24,8 @@ function TodoList() {
 
   return (
     <div>
-      <h2>Todos List</h2>
-      {todos.length === 0 && <p>No todos yet!</p>}
+    
+      {todos.length === 0 && <p>No todos yet! Add one above</p>}
       <ul>
         {filteredTodos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />

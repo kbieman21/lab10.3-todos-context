@@ -41,7 +41,7 @@ export function TodosProvider({ children }: TodosProviderProps) {
     const storedToDos = localStorage.getItem("toDos");
     return storedToDos ? JSON.parse(storedToDos) : data;
   });
-  console.log(todos);
+  //console.log(todos);
 
   //TODO: store todos when the todos array changes
   useEffect(() => {
@@ -49,9 +49,11 @@ export function TodosProvider({ children }: TodosProviderProps) {
   }, [todos]);
 
   //TODO: Actions
-  const addTodo = (text) => {
+  const addTodo = (text:string) => {
     if (!text.trim()) return; // prevent empty todos
 
+    console.log("there is no text added");
+    
     const newTodo = {
       id: crypto.randomUUID(), // modern built-in ID generator
       text,

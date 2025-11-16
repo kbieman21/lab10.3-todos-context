@@ -8,7 +8,7 @@ function FilterControls() {
    
   return (
     <div>
-      <h1>Filter Component</h1>
+     
       <div>
          <button onClick={()=> setFilter('all')}
          style={{fontWeight: filter=== 'all' ? 'bold' : 'normal'}}

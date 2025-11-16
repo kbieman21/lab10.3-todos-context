@@ -7,7 +7,7 @@ function ThemeToggle(){
 
     return(
         <div>
-            <h1>Theme Toggle</h1>
+           
             <button onClick={toggleTheme}
             style={{
             padding: "8px 14px",

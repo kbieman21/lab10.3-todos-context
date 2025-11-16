@@ -10,11 +10,10 @@ function App() {
 
   return (
     <>
-     <h1>Todo App (Context API)</h1>
+     <h1 className='text-3xl font-bold'>Todo App (Context API)</h1>
      <ThemeToggle/>
-     <hr />
-      
-      <TodoInput text={""}/>
+       
+     <TodoInput text={""}/>
      <FilterControls/>    
      <TodoList/>
      

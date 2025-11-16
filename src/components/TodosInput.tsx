@@ -14,35 +14,26 @@ function handleChange(event:ChangeEvent<HTMLInputElement>){
 function handleSubmit() {
     if (text.trim() === "") return;
     addTodo(text);
-    //setText(""); // clear input
+    setText(""); // clear input
   }
 
 
 return(
-    <>
+    <div className="flex gap-3 mt-8 mb-8">
        
           <input 
             type="text" 
             placeholder="What needs to be done" 
             value={text}
-            onChange={handleChange}/>
-        <button onClick={handleSubmit}>Add Task</button>
-    </>
+            onChange={handleChange}
+            className="flex-1 px-4 py-2
+          border "/>
+        <button onClick={handleSubmit} className="px-5 py-2 rounded-md
+          ">Add Task</button>
+    </div>
 )
 
 }
 
 export default TodoInput;
 
-/*
-Purpose:
-	• shows a text input
-	• lets user press Enter or click a button to add a todo
-	• calls addTodo(text) from context
-Directions:
-	• create a local state: text
-	• controlled input: value={text}
-	• on submit → call addTodo(text)
-	• clear the input after adding
-This component does NOT display any todos.
- */

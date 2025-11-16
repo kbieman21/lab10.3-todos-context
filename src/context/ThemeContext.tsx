@@ -25,11 +25,11 @@ export function ThemeProvider({children}:ThemeContextProps){
     // theme toggle
     const toggleTheme = () => {
         setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
+       
+        
     }
 
     
-
-
     // persist theme in localStorage
     useEffect(()=>{
         // localStorage.setItem('theme', JSON.stringify(theme))

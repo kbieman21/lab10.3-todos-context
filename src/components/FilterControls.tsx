@@ -7,9 +7,9 @@ function FilterControls() {
 
    
   return (
-    <div>
+    <div className="grid grid-cols-3 gap-2 mb-5">
      
-      <div>
+      <div >
          <button onClick={()=> setFilter('all')}
          style={{fontWeight: filter=== 'all' ? 'bold' : 'normal'}}
          className={`filter-btn ${filter === 'all' ? 'active' : ''}`}

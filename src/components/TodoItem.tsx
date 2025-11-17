@@ -17,6 +17,9 @@ function TodoItem({ todo }: TodoItemProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(todo.text);
 
+    
+
+
   return (
     <>
       <li>
@@ -56,6 +59,9 @@ function TodoItem({ todo }: TodoItemProps) {
         )}
         <button onClick={() => deleteTodo(todo.id)}>Delete</button>
       </li>
+      
+      
+
     </>
   );
 }

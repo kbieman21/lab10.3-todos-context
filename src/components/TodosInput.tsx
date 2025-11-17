@@ -5,7 +5,7 @@ import { TodosContext } from "../context/TodosContext";
 
 function TodoInput(){
     const [text, setText] = useState("");
-    const { addTodo} = useContext(TodosContext);
+    const {addTodo} = useContext(TodosContext);
 
 function handleChange(event:ChangeEvent<HTMLInputElement>){
     setText(event.target.value);

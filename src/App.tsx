@@ -13,7 +13,7 @@ function App() {
      <h1 className='text-3xl font-bold'>Todo App (Context API)</h1>
      <ThemeToggle/>
        
-     <TodoInput text={""}/>
+     <TodoInput/>
      <FilterControls/>    
      <TodoList/>
      

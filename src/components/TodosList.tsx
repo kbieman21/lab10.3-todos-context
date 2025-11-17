@@ -1,11 +1,23 @@
 import { useContext } from "react";
 import { TodosContext } from "../context/TodosContext";
 import { FilterContext } from "../context/FilterContext";
-import { ThemeContext } from "../context/ThemeContext";
-import TodoItem from "./TodoItem";
 
-function TodoList() {
-  const { todos } = useContext(TodosContext);
+import TodoItem from "./TodoItem";
+//import { todo } from "node:test";
+
+
+
+interface TodoItemProps {
+  todo: {
+    id: string;
+    text: string;
+    completed: boolean;
+  };
+}
+
+
+function TodoList({todo}: TodoItemProps) {
+  const { todos, clearCompleted } = useContext(TodosContext);
   const { filter } = useContext(FilterContext);
 
 
@@ -22,6 +34,8 @@ function TodoList() {
   });
   
 
+
+
   return (
     <div>
     
@@ -31,6 +45,18 @@ function TodoList() {
           <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
+      <button
+  onClick={clearCompleted}
+  disabled={!todos.some(t => t.completed)}
+  className="
+    px-4 py-2 mt-3 rounded-md
+    text-white
+    disabled:opacity-40 disabled:cursor-not-allowed
+    bg-red-500 hover:bg-red-600
+  "
+>
+  Clear Completed
+</button>
     </div>
   );
 }
